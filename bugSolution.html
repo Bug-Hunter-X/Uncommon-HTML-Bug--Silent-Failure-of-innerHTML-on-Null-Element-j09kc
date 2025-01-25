@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    const myElement = document.getElementById('myDiv'); //Corrected ID
+    if (myElement) {
+      myElement.innerHTML = "<p>This text should be visible.</p>";
+    }
+     //Alternative solution with error handling
+     const myElement2 = document.getElementById('myDiv2');
+     if (!myElement2){
+       console.error('Element with ID "myDiv2" not found');
+     }else{
+       myElement2.innerHTML = "<p>This text should not be visible.</p>";
+     }
+  </script>
+</body>
+</html>
