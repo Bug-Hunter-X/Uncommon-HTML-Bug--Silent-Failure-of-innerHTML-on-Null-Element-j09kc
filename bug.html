@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    //Bug: Incorrect use of innerHTML with a null target element
+    const myElement = document.getElementById('myDiv2'); //myDiv2 is the problem
+    if (myElement) {
+      myElement.innerHTML = "<p>This text should not be visible.</p>";
+    }
+  </script>
+</body>
+</html>
